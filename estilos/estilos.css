@@ -1,0 +1,45 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f2f2f2;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+#display {
+    width: 300px;
+    height: 50px;
+    font-size: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.operador {
+    width: 70px;
+    height: 50px;
+    background-color: #ccc;
+    border: 1px solid #ccc;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.operador:hover {
+    background-color: #ddd;
+}

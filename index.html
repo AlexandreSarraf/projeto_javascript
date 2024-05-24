@@ -1,18 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto_JavaScript</title>
-    <link rel="stylesheet" href="./estilos/estilos.css">    
+    <title>Calculadora Simples</title>
+    <link rel="stylesheet" href="./estilos/estilos.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <img scr="./imagens/javascript_logo.png" alt="Logo do Projeto" class="logo" id="logo">
-
+    <div class="container">
+        <h1>Calculadora Simples</h1>
+        <input type="text" id="display" value="">
+        <div class="buttons">
+            <button class="operador" onclick="adicionarNumero('7')">7</button>
+            <button class="operador" onclick="adicionarNumero('8')">8</button>
+            <button class="operador" onclick="adicionarNumero('9')">9</button>
+            <button class="operador" onclick="adicionarOperador('+')">+</button>
+            <br><br>
+            <button class="operador" onclick="adicionarNumero('4')">4</button>
+            <button class="operador" onclick="adicionarNumero('5')">5</button>
+            <button class="operador" onclick="adicionarNumero('6')">6</button>
+            <button class="operador" onclick="adicionarOperador('-')">-</button>
+            <br><br>
+            <button class="operador" onclick="adicionarNumero('1')">1</button>
+            <button class="operador" onclick="adicionarNumero('2')">2</button>
+            <button class="operador" onclick="adicionarNumero('3')">3</button>
+            <button class="operador" onclick="adicionarOperador('*')">*</button>
+            <br><br>
+            <button class="operador" onclick="adicionarNumero('0')">0</button>
+            <button class="operador" onclick="adicionarNumero('.')">.</button>
+            <button class="operador" onclick="calcular()">=</button>
+            <button class="operador" onclick="limpar()">C</button>
         </div>
-    </header>
-    <script src="./js/scripts.js"></script>
+    </div>
+    <script src="./scripts/scripts.js"></script>
 </body>
 </html>
