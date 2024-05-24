@@ -1,37 +1,35 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora Simples</title>
-    <link rel="stylesheet" href="./estilos/estilos.css">
+    <link rel="stylesheet" href="estilos/estilos.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Calculadora Simples</h1>
-        <input type="text" id="display" value="">
-        <div class="buttons">
-            <button class="operador" onclick="adicionarNumero('7')">7</button>
-            <button class="operador" onclick="adicionarNumero('8')">8</button>
-            <button class="operador" onclick="adicionarNumero('9')">9</button>
-            <button class="operador" onclick="adicionarOperador('+')">+</button>
-            <br><br>
-            <button class="operador" onclick="adicionarNumero('4')">4</button>
-            <button class="operador" onclick="adicionarNumero('5')">5</button>
-            <button class="operador" onclick="adicionarNumero('6')">6</button>
-            <button class="operador" onclick="adicionarOperador('-')">-</button>
-            <br><br>
-            <button class="operador" onclick="adicionarNumero('1')">1</button>
-            <button class="operador" onclick="adicionarNumero('2')">2</button>
-            <button class="operador" onclick="adicionarNumero('3')">3</button>
-            <button class="operador" onclick="adicionarOperador('*')">*</button>
-            <br><br>
-            <button class="operador" onclick="adicionarNumero('0')">0</button>
-            <button class="operador" onclick="adicionarNumero('.')">.</button>
-            <button class="operador" onclick="calcular()">=</button>
-            <button class="operador" onclick="limpar()">C</button>
+    <div class="calculadora">
+        <input type="text" id="display" disabled>
+        <div class="teclado">
+            <button onclick="clearDisplay()">C</button>
+            <button onclick="deleteLast()">←</button>
+            <button onclick="appendCharacter('/')">/</button>
+            <button onclick="appendCharacter('*')">*</button>
+            <button onclick="appendCharacter('7')">7</button>
+            <button onclick="appendCharacter('8')">8</button>
+            <button onclick="appendCharacter('9')">9</button>
+            <button onclick="appendCharacter('-')">-</button>
+            <button onclick="appendCharacter('4')">4</button>
+            <button onclick="appendCharacter('5')">5</button>
+            <button onclick="appendCharacter('6')">6</button>
+            <button onclick="appendCharacter('+')">+</button>
+            <button onclick="appendCharacter('1')">1</button>
+            <button onclick="appendCharacter('2')">2</button>
+            <button onclick="appendCharacter('3')">3</button>
+            <button onclick="appendCharacter('.')">.</button>
+            <button onclick="appendCharacter('0')">0</button>
+            <button onclick="calculateResult()" class="equal">=</button>
         </div>
     </div>
-    <script src="./scripts/scripts.js"></script>
+    <script src="scripts/scripts.js"></script>
 </body>
 </html>

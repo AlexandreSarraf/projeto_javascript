@@ -1,38 +1,22 @@
-let display = document.getElementById('display');
-let valorAtual = '';
-let operacaoAnterior = null;
-
-function adicionarNumero(numero) {
-    valorAtual += numero;
-    display.value = valorAtual;
+function clearDisplay() {
+    document.getElementById('display').value = '';
 }
 
-function adicionarOperador(operador) {
-    if (valorAtual === '') {
-        return;
-    }
-
-    if (operacaoAnterior !== null) {
-        calcular();
-    }
-
-    operacaoAnterior = operador;
-    valorAtual = '';
-    display.value = valorAtual;
+function deleteLast() {
+    const display = document.getElementById('display');
+    display.value = display.value.slice(0, -1);
 }
 
-function calcular() {
-    if (valorAtual === '') {
-        return;
-    }
+function appendCharacter(character) {
+    const display = document.getElementById('display');
+    display.value += character;
+}
 
-    let resultado = parseFloat(valorAtual);
-
-    if (operacaoAnterior === '+') {
-        resultado += parseFloat(valorAnterior);
-    } else if (operacaoAnterior === '-') {
-        resultado -= parseFloat(valorAnterior);
-    } else if (operacaoAnterior === '*') {
-        resultado *= parseFloat
+function calculateResult() {
+    const display = document.getElementById('display');
+    try {
+        display.value = eval(display.value);
+    } catch (e) {
+        display.value = 'Erro';
     }
 }
